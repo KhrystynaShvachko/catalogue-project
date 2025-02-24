@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інтернет-магазин товарів з різними категоріями та цінами.">
+    <title>Каталог товарів</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Інтернет-магазин</h1>
+            <div class="cart">
+                <button onclick="toggleCart()">Кошик (<span id="cart-count">0</span>)</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="catalog">
+        <article class="product">
+            <img src="images/product1.jpg" alt="Товар 1">
+            <h2>Товар 1</h2>
+            <p class="description">Опис товару 1.</p>
+            <p class="price">Ціна: 200 грн</p>
+            <button onclick="addToCart('Товар 1', 200)">Додати в кошик</button>
+        </article>
+
+        <article class="product">
+            <img src="images/product2.jpg" alt="Товар 2">
+            <h2>Товар 2</h2>
+            <p class="description">Опис товару 2.</p>
+            <p class="price">Ціна: 350 грн</p>
+            <button onclick="addToCart('Товар 2', 350)">Додати в кошик</button>
+        </article>
+
+        <article class="product">
+            <img src="images/product3.jpg" alt="Товар 3">
+            <h2>Товар 3</h2>
+            <p class="description">Опис товару 3.</p>
+            <p class="price">Ціна: 500 грн</p>
+            <button onclick="addToCart('Товар 3', 500)">Додати в кошик</button>
+        </article>
+    </section>
+
+    <section id="cart" class="cart-popup">
+        <h3>Ваш кошик</h3>
+        <ul id="cart-items"></ul>
+        <button onclick="closeCart()">Закрити кошик</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Інтернет-магазин</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
